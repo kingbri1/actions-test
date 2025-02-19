@@ -1,0 +1,10 @@
+name: CI
+on: 
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: windows-2022
+    steps:
+    - uses: actions/checkout@v4
+    - name: Log processor number
+      run: echo $env:NUMBER_OF_PROCESSORS
